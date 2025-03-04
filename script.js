@@ -40,8 +40,8 @@ function throttle(callback,delay=1000){
         }else{
             callback(...waitingArgs)
             waitingArgs = null
+        setTimeout(timeoutFunc, delay)
         }
-        setTimeout(timeoutFunc,delay)
     }
 
     return(...args)=>{
